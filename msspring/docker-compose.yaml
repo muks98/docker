@@ -1,0 +1,15 @@
+version: '3'
+services:
+  cypto:
+    image: msaccess/cryptoapp:v1.0
+    deploy:
+      replicas: 4
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "8082:8080"
+    networks:
+      - cryptonet
+networks:
+  cryptonet:
+
