@@ -8,10 +8,8 @@ ADD . /app
 
 EXPOSE 8080
 
-ARG spring_jar=test.jar
-
-LABEL io.k8s.description="Springboot image built from base-centos7 image" \
-      io.k8s.display-name="Maven Springboot" \
+LABEL io.k8s.description="Springboot image built from openjdk8-jre-alpine" \
+      io.k8s.display-name="Crypto Springboot API" \
       io.openshift.tags="builder,java,springboot,java8"
 
 #     echo "$(find / -name java -print)" \
